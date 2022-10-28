@@ -16,9 +16,9 @@ config.training(
     v_min=0.,
     v_max=200.,
     noisy=True,
-    dueling=True,
-    double_q=True,
-    hiddens=[128,128],
+    #dueling=True,
+    #double_q=True,
+    hiddens=[256],
     n_step=5
 ).resources(num_gpus=1).framework(framework="torch")
 
@@ -27,6 +27,7 @@ model.restore("save/checkpoint_001940")
 
 done    = False
 obs     = env.reset()
+env.goal= 1
 policy  = model.get_policy()
 
 while not done:
