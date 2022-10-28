@@ -5,6 +5,7 @@ __pycache__/
 
 # Own files
 save/
+videos/
 
 # C extensions
 *.so
